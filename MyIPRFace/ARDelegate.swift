@@ -54,6 +54,9 @@ class ARDelegate: NSObject, ARSCNViewDelegate, ObservableObject {
   //  private var trackedNode:SCNNode?
     
     
+    
+    
+    
 
     func updateFeatures(for node: SCNNode, using anchor: ARFaceAnchor) {
       for (feature, indices) in zip(features, featureIndices) {
