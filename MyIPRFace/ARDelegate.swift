@@ -3,7 +3,7 @@ import ARKit
 import UIKit
 
 class ARDelegate: NSObject, ARSCNViewDelegate, ObservableObject {
-    @Published var message:String = "starting AR"
+   // @Published var message:String = "starting AR"
     
     let noseOptions = ["👃", "🐽", "💧", " "]
     let eyeOptions = ["⚽️", "👁", "🌕", "🌟", "🔥", "🔎", " "]
@@ -16,20 +16,14 @@ class ARDelegate: NSObject, ARSCNViewDelegate, ObservableObject {
     func setARView(_ arView: ARSCNView) {
         self.arView = arView
         guard ARFaceTrackingConfiguration.isSupported else { return }
-       // let configuration = ARWorldTrackingConfiguration()
         let configuration = ARFaceTrackingConfiguration()
         configuration.isLightEstimationEnabled = true
-      //  configuration.planeDetection = .horizontal
-        //configuration.isWorldTrackingEnabled
         arView.session.run(configuration)
         
         arView.delegate = self
         arView.scene = SCNScene()
-//        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapOnARView))
-//        arView.addGestureRecognizer(tapGesture)
-//
-//        let panGesture = UIPanGestureRecognizer(target: self, action: #selector(panOnARView))
-      //  arView.addGestureRecognizer(panGesture)
+       let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
+       arView.addGestureRecognizer(tapGesture)
     }
     
     
@@ -124,7 +118,7 @@ class ARDelegate: NSObject, ARSCNViewDelegate, ObservableObject {
       updateFeatures(for: node, using: faceAnchor)
     }
     
-    func handleTap(_ sender: UITapGestureRecognizer) {
+    @objc func handleTap(_ sender: UITapGestureRecognizer) {
       let location = sender.location(in: arView)
         let results = arView!.hitTest(location, options: nil)
       if let result = results.first,

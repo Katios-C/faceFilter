@@ -7,8 +7,6 @@ struct ContentView: View {
     var body: some View {
         ZStack {
             ARViewRepresentable(arDelegate: arDelegate)
-           // Text("Hello")
-         //  AugmentedRealityView()
         }.edgesIgnoringSafeArea(.all)
     }
 }
