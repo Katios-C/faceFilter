@@ -15,6 +15,9 @@
 		95B7764A2837A2EC005201F6 /* ARViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B776492837A2EC005201F6 /* ARViewRepresentable.swift */; };
 		95B7764C2837A49A005201F6 /* EmojiNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B7764B2837A49A005201F6 /* EmojiNode.swift */; };
 		95B7764E2837A4D0005201F6 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B7764D2837A4D0005201F6 /* Extensions.swift */; };
+		95B7768A283CD4BA005201F6 /* iOSDevPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 95B77689283CD4BA005201F6 /* iOSDevPackage */; };
+		95B7768C283CD72A005201F6 /* StartVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B7768B283CD72A005201F6 /* StartVideoView.swift */; };
+		95B7768E283E1C99005201F6 /* VideoRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B7768D283E1C99005201F6 /* VideoRecord.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,8 @@
 		95B7764B2837A49A005201F6 /* EmojiNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiNode.swift; sourceTree = "<group>"; };
 		95B7764D2837A4D0005201F6 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		95B7764F2837AF94005201F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		95B7768B283CD72A005201F6 /* StartVideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartVideoView.swift; sourceTree = "<group>"; };
+		95B7768D283E1C99005201F6 /* VideoRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoRecord.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95B7768A283CD4BA005201F6 /* iOSDevPackage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,9 +69,11 @@
 				95B7764F2837AF94005201F6 /* Info.plist */,
 				95B7763928379EE0005201F6 /* MyIPRFaceApp.swift */,
 				95B7763B28379EE0005201F6 /* ContentView.swift */,
+				95B7768B283CD72A005201F6 /* StartVideoView.swift */,
 				95B7764D2837A4D0005201F6 /* Extensions.swift */,
 				95B776472837A0E2005201F6 /* ARDelegate.swift */,
 				95B776492837A2EC005201F6 /* ARViewRepresentable.swift */,
+				95B7768D283E1C99005201F6 /* VideoRecord.swift */,
 				95B7764B2837A49A005201F6 /* EmojiNode.swift */,
 				95B7763D28379EE1005201F6 /* Assets.xcassets */,
 				95B7763F28379EE1005201F6 /* Preview Content */,
@@ -97,6 +105,9 @@
 			dependencies = (
 			);
 			name = MyIPRFace;
+			packageProductDependencies = (
+				95B77689283CD4BA005201F6 /* iOSDevPackage */,
+			);
 			productName = MyIPRFace;
 			productReference = 95B7763628379EE0005201F6 /* MyIPRFace.app */;
 			productType = "com.apple.product-type.application";
@@ -125,6 +136,9 @@
 				Base,
 			);
 			mainGroup = 95B7762D28379EE0005201F6;
+			packageReferences = (
+				95B77688283CD4BA005201F6 /* XCRemoteSwiftPackageReference "iosdevpackage" */,
+			);
 			productRefGroup = 95B7763728379EE0005201F6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -153,10 +167,12 @@
 			files = (
 				95B7763C28379EE0005201F6 /* ContentView.swift in Sources */,
 				95B7764E2837A4D0005201F6 /* Extensions.swift in Sources */,
+				95B7768E283E1C99005201F6 /* VideoRecord.swift in Sources */,
 				95B776482837A0E2005201F6 /* ARDelegate.swift in Sources */,
 				95B7764A2837A2EC005201F6 /* ARViewRepresentable.swift in Sources */,
 				95B7763A28379EE0005201F6 /* MyIPRFaceApp.swift in Sources */,
 				95B7764C2837A49A005201F6 /* EmojiNode.swift in Sources */,
+				95B7768C283CD72A005201F6 /* StartVideoView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,6 +306,8 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MyIPRFace/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Need camera";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "The app needs your mic";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -321,6 +339,8 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MyIPRFace/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Need camera";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "The app needs your mic";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -361,6 +381,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		95B77688283CD4BA005201F6 /* XCRemoteSwiftPackageReference "iosdevpackage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://gitlab.issart.com/nbaklanov/iosdevpackage.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		95B77689283CD4BA005201F6 /* iOSDevPackage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 95B77688283CD4BA005201F6 /* XCRemoteSwiftPackageReference "iosdevpackage" */;
+			productName = iOSDevPackage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 95B7762E28379EE0005201F6 /* Project object */;
 }

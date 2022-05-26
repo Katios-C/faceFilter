@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "iosdevpackage",
+      "kind" : "remoteSourceControl",
+      "location" : "https://gitlab.issart.com/nbaklanov/iosdevpackage.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "18330c25760046e89221a3e3e3e2eb6f21e91bac"
+      }
+    }
+  ],
+  "version" : 2
+}

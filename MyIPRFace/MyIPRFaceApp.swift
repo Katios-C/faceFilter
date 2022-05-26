@@ -1,12 +1,15 @@
-
-
 import SwiftUI
+import iOSDevPackage
+
 
 @main
 struct MyIPRFaceApp: App {
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationControllerView(transition: .custom(.slide, .slide)) {
+            StartVideoView()
         }
     }
+}
 }
