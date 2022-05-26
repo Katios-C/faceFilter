@@ -37,7 +37,7 @@ struct ContentView: View {
                 Spacer()
                 HStack {
                 Button("Start") {
-                    arDelegate.startRecording()
+                    arDelegate.startRecord()
                    
                 }
                 .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 60)
@@ -47,7 +47,7 @@ struct ContentView: View {
                 .padding(.horizontal)
                 .padding(20)
                     Button("Save") {
-                        arDelegate.stopRecording()
+                        arDelegate.stopVideo()
                       
                     }
                     .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 60)
