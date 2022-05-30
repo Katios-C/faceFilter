@@ -6,15 +6,6 @@ struct ARViewRepresentable: UIViewRepresentable {
     
     func makeUIView(context: Context) -> some UIView {
         
-////        guard ARFaceTrackingConfiguration.isSupported else { return }
-//        let configuration = ARFaceTrackingConfiguration()
-//        if #available(iOS 13.0, *) {
-//            configuration.maximumNumberOfTrackedFaces = ARFaceTrackingConfiguration.supportedNumberOfTrackedFaces
-//        }
-//        configuration.isLightEstimationEnabled = true
-////        sceneView.session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
-
-        
         let arView = ARSCNView(frame: .zero)
         arDelegate.setARView(arView)
         return arView

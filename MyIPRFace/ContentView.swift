@@ -5,6 +5,7 @@ import iOSDevPackage
 struct ContentView: View {
     
     @ObservedObject var arDelegate = ARDelegate()
+  //  @ObservedObject var recording = Recording()
     @EnvironmentObject private var navigation: NavigationControllerViewModel
     
     var body: some View {
@@ -14,16 +15,16 @@ struct ContentView: View {
             VStack {
                 HStack {
                     ZStack {
-                    Button("") {
+                        Button("") {
+                            
+                        }
                         
-                    }
-
-                    .frame(width: 60, height: 60)
-                    .background(Color.orange)
-                    .foregroundColor(.white)
-                    .clipShape(Circle())
+                        .frame(width: 60, height: 60)
+                        .background(Color.orange)
+                        .foregroundColor(.white)
+                        .clipShape(Circle())
                         Image(systemName: "arrowshape.turn.up.backward")
-                                              .aspectRatio(contentMode: .fit)
+                            .aspectRatio(contentMode: .fit)
                         
                     }
                     .padding(.top, 40)
@@ -36,19 +37,21 @@ struct ContentView: View {
                 
                 Spacer()
                 HStack {
-                Button("Start") {
-                    arDelegate.startRecording()
-                   
-                }
-                .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 60)
-                .background(Color.orange)
-                .foregroundColor(.white)
-                .clipShape(Circle())
-                .padding(.horizontal)
-                .padding(20)
+                    Button("Start") {
+                        arDelegate.startRecording()
+                      //  recording.startRecording()
+                        
+                    }
+                    .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 60)
+                    .background(Color.orange)
+                    .foregroundColor(.white)
+                    .clipShape(Circle())
+                    .padding(.horizontal)
+                    .padding(20)
                     Button("Save") {
                         arDelegate.stopRecording()
-                      
+                      //  recording.stopRecording()
+                        
                     }
                     .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 60)
                     .background(Color.orange)
