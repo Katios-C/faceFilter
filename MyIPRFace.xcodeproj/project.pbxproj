@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		951C4ADF2845C60600F60389 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951C4ADE2845C60600F60389 /* Extensions.swift */; };
+		951C4AE22845D27100F60389 /* ShareSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951C4AE12845D27100F60389 /* ShareSheet.swift */; };
 		95B7763A28379EE0005201F6 /* MyIPRFaceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B7763928379EE0005201F6 /* MyIPRFaceApp.swift */; };
 		95B7763C28379EE0005201F6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B7763B28379EE0005201F6 /* ContentView.swift */; };
 		95B7763E28379EE1005201F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95B7763D28379EE1005201F6 /* Assets.xcassets */; };
@@ -14,13 +16,14 @@
 		95B776482837A0E2005201F6 /* ARDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B776472837A0E2005201F6 /* ARDelegate.swift */; };
 		95B7764A2837A2EC005201F6 /* ARViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B776492837A2EC005201F6 /* ARViewRepresentable.swift */; };
 		95B7764C2837A49A005201F6 /* EmojiNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B7764B2837A49A005201F6 /* EmojiNode.swift */; };
-		95B7764E2837A4D0005201F6 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B7764D2837A4D0005201F6 /* Extensions.swift */; };
 		95B7768A283CD4BA005201F6 /* iOSDevPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 95B77689283CD4BA005201F6 /* iOSDevPackage */; };
 		95B7768C283CD72A005201F6 /* StartVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B7768B283CD72A005201F6 /* StartVideoView.swift */; };
 		95B776A728447A3B005201F6 /* Recording.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B776A628447A3B005201F6 /* Recording.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		951C4ADE2845C60600F60389 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		951C4AE12845D27100F60389 /* ShareSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSheet.swift; sourceTree = "<group>"; };
 		95B7763628379EE0005201F6 /* MyIPRFace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyIPRFace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95B7763928379EE0005201F6 /* MyIPRFaceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyIPRFaceApp.swift; sourceTree = "<group>"; };
 		95B7763B28379EE0005201F6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -29,7 +32,6 @@
 		95B776472837A0E2005201F6 /* ARDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARDelegate.swift; sourceTree = "<group>"; };
 		95B776492837A2EC005201F6 /* ARViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewRepresentable.swift; sourceTree = "<group>"; };
 		95B7764B2837A49A005201F6 /* EmojiNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiNode.swift; sourceTree = "<group>"; };
-		95B7764D2837A4D0005201F6 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		95B7764F2837AF94005201F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		95B7768B283CD72A005201F6 /* StartVideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartVideoView.swift; sourceTree = "<group>"; };
 		95B776A628447A3B005201F6 /* Recording.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recording.swift; sourceTree = "<group>"; };
@@ -47,6 +49,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		951C4ADD2845C5F100F60389 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				951C4ADE2845C60600F60389 /* Extensions.swift */,
+				951C4AE02845D26400F60389 /* View */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		951C4AE02845D26400F60389 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				951C4AE12845D27100F60389 /* ShareSheet.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		95B7762D28379EE0005201F6 = {
 			isa = PBXGroup;
 			children = (
@@ -70,7 +89,7 @@
 				95B7763928379EE0005201F6 /* MyIPRFaceApp.swift */,
 				95B7763B28379EE0005201F6 /* ContentView.swift */,
 				95B7768B283CD72A005201F6 /* StartVideoView.swift */,
-				95B7764D2837A4D0005201F6 /* Extensions.swift */,
+				951C4ADD2845C5F100F60389 /* Helpers */,
 				95B776472837A0E2005201F6 /* ARDelegate.swift */,
 				95B776A628447A3B005201F6 /* Recording.swift */,
 				95B776492837A2EC005201F6 /* ARViewRepresentable.swift */,
@@ -166,12 +185,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				95B7763C28379EE0005201F6 /* ContentView.swift in Sources */,
-				95B7764E2837A4D0005201F6 /* Extensions.swift in Sources */,
+				951C4ADF2845C60600F60389 /* Extensions.swift in Sources */,
 				95B776482837A0E2005201F6 /* ARDelegate.swift in Sources */,
 				95B7764A2837A2EC005201F6 /* ARViewRepresentable.swift in Sources */,
 				95B7763A28379EE0005201F6 /* MyIPRFaceApp.swift in Sources */,
 				95B7764C2837A49A005201F6 /* EmojiNode.swift in Sources */,
 				95B7768C283CD72A005201F6 /* StartVideoView.swift in Sources */,
+				951C4AE22845D27100F60389 /* ShareSheet.swift in Sources */,
 				95B776A728447A3B005201F6 /* Recording.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -303,6 +323,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"MyIPRFace/Preview Content\"";
 				DEVELOPMENT_TEAM = HRA638G7C3;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_TESTING_SEARCH_PATHS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MyIPRFace/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Need camera";
@@ -336,6 +357,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"MyIPRFace/Preview Content\"";
 				DEVELOPMENT_TEAM = HRA638G7C3;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_TESTING_SEARCH_PATHS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MyIPRFace/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Need camera";
