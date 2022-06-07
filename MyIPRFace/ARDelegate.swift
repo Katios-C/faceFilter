@@ -15,9 +15,13 @@ class ARDelegate: NSObject, ARSCNViewDelegate, ObservableObject, AVCaptureAudioD
     
     private var arView: ARSCNView?
   //   let noseOptions = ["👃", "🐽", "💧", " "]
-    let eyeOptions = ["⚽️", "👁", "🌕", "🌟", "🔥", "🔎", " "]
-    let mouthOptions = [" ", "👄", "👅", "❤️", " "]
-    let hatOptions = ["🎓", "🎩", "🧢", "⛑", "👒", " "]
+//    let eyeOptions = ["⚽️", "👁", "🌕", "🌟", "🔥", "🔎", " "]
+//    let mouthOptions = [" ", "👄", "👅", "❤️", " "]
+//    let hatOptions = ["🎓", "🎩", "🧢", "⛑", "👒", " "]
+    private var eyeString = ""
+    private var noseString = ""
+    private var lipString = ""
+    
     let features = ["nose", "leftEye", "rightEye", "mouth", "hat"]
     let featureIndices = [[9], [1064], [42], [24, 25], [20]]
     
@@ -40,7 +44,7 @@ class ARDelegate: NSObject, ARSCNViewDelegate, ObservableObject, AVCaptureAudioD
     var audioOutput:AVCaptureAudioDataOutput?
     
     
-    func setARView(_ arView: ARSCNView) {
+    func setARView(_ arView: ARSCNView, eye: String, nose: String, lips: String) {
         self.arView = arView
         guard ARFaceTrackingConfiguration.isSupported else { return }
         let configuration = ARFaceTrackingConfiguration()
@@ -50,6 +54,9 @@ class ARDelegate: NSObject, ARSCNViewDelegate, ObservableObject, AVCaptureAudioD
         arView.delegate = self
         arView.scene = SCNScene()
         
+        eyeString = eye
+        noseString = nose
+        lipString = lips
      
 //        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
 //        arView.addGestureRecognizer(tapGesture)
@@ -90,20 +97,20 @@ class ARDelegate: NSObject, ARSCNViewDelegate, ObservableObject, AVCaptureAudioD
         node.geometry?.firstMaterial?.fillMode = .lines
         
         node.geometry?.firstMaterial?.transparency = 0.0
-        let noseNode = EmojiNode(with: selectVM.selectedNose)
+        let noseNode = EmojiNode(with: noseString)
         noseNode.name = "nose"
         node.addChildNode(noseNode)
         
-        let leftEyeNode = EmojiNode(with: selectVM.selectedEyes)
+        let leftEyeNode = EmojiNode(with: eyeString)
         leftEyeNode.name = "leftEye"
         leftEyeNode.rotation = SCNVector4(0, 1, 0, GLKMathDegreesToRadians(180.0))
         node.addChildNode(leftEyeNode)
         
-        let rightEyeNode = EmojiNode(with: selectVM.selectedEyes)
+        let rightEyeNode = EmojiNode(with: eyeString)
         rightEyeNode.name = "rightEye"
         node.addChildNode(rightEyeNode)
         
-        let mouthNode = EmojiNode(with: selectVM.selectedLips)
+        let mouthNode = EmojiNode(with: lipString)
         mouthNode.name = "mouth"
         node.addChildNode(mouthNode)
         

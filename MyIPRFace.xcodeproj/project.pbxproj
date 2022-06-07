@@ -23,6 +23,7 @@
 		95B7768A283CD4BA005201F6 /* iOSDevPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 95B77689283CD4BA005201F6 /* iOSDevPackage */; };
 		95B7768C283CD72A005201F6 /* StartVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B7768B283CD72A005201F6 /* StartVideoView.swift */; };
 		95B776A728447A3B005201F6 /* Recording.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B776A628447A3B005201F6 /* Recording.swift */; };
+		95D251F1284F0124000FE477 /* ARViewStart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D251F0284F0124000FE477 /* ARViewStart.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		95B7764F2837AF94005201F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		95B7768B283CD72A005201F6 /* StartVideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartVideoView.swift; sourceTree = "<group>"; };
 		95B776A628447A3B005201F6 /* Recording.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recording.swift; sourceTree = "<group>"; };
+		95D251F0284F0124000FE477 /* ARViewStart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewStart.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,8 @@
 		951C4AE02845D26400F60389 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				95D251F0284F0124000FE477 /* ARViewStart.swift */,
+				95B7768B283CD72A005201F6 /* StartVideoView.swift */,
 				951C4AE12845D27100F60389 /* ShareSheet.swift */,
 			);
 			path = View;
@@ -125,7 +129,6 @@
 				95B7763B28379EE0005201F6 /* ContentView.swift */,
 				95447244284A1218003879ED /* SelectionOfSmiles.swift */,
 				95447246284DBD11003879ED /* ViewModel */,
-				95B7768B283CD72A005201F6 /* StartVideoView.swift */,
 				951C4ADD2845C5F100F60389 /* Helpers */,
 				95B776472837A0E2005201F6 /* ARDelegate.swift */,
 				95B776A628447A3B005201F6 /* Recording.swift */,
@@ -236,6 +239,7 @@
 				95B7768C283CD72A005201F6 /* StartVideoView.swift in Sources */,
 				951C4AE22845D27100F60389 /* ShareSheet.swift in Sources */,
 				95B776A728447A3B005201F6 /* Recording.swift in Sources */,
+				95D251F1284F0124000FE477 /* ARViewStart.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
