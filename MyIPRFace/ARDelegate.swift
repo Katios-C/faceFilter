@@ -8,12 +8,13 @@ import SwiftUI
 import CoreMedia
 import AVFoundation
 import Photos
+import Resolver
 
 class ARDelegate: NSObject, ARSCNViewDelegate, ObservableObject, AVCaptureAudioDataOutputSampleBufferDelegate {
- 
-    private var arView: ARSCNView?
+    @Injected private var selectVM: SelectSmileViewModel
     
-    let noseOptions = ["👃", "🐽", "💧", " "]
+    private var arView: ARSCNView?
+  //   let noseOptions = ["👃", "🐽", "💧", " "]
     let eyeOptions = ["⚽️", "👁", "🌕", "🌟", "🔥", "🔎", " "]
     let mouthOptions = [" ", "👄", "👅", "❤️", " "]
     let hatOptions = ["🎓", "🎩", "🧢", "⛑", "👒", " "]
@@ -48,8 +49,10 @@ class ARDelegate: NSObject, ARSCNViewDelegate, ObservableObject, AVCaptureAudioD
         
         arView.delegate = self
         arView.scene = SCNScene()
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
-        arView.addGestureRecognizer(tapGesture)
+        
+     
+//        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
+//        arView.addGestureRecognizer(tapGesture)
     }
     
  // +
@@ -87,26 +90,26 @@ class ARDelegate: NSObject, ARSCNViewDelegate, ObservableObject, AVCaptureAudioD
         node.geometry?.firstMaterial?.fillMode = .lines
         
         node.geometry?.firstMaterial?.transparency = 0.0
-        let noseNode = EmojiNode(with: noseOptions)
+        let noseNode = EmojiNode(with: selectVM.selectedNose)
         noseNode.name = "nose"
         node.addChildNode(noseNode)
         
-        let leftEyeNode = EmojiNode(with: eyeOptions)
+        let leftEyeNode = EmojiNode(with: selectVM.selectedEyes)
         leftEyeNode.name = "leftEye"
         leftEyeNode.rotation = SCNVector4(0, 1, 0, GLKMathDegreesToRadians(180.0))
         node.addChildNode(leftEyeNode)
         
-        let rightEyeNode = EmojiNode(with: eyeOptions)
+        let rightEyeNode = EmojiNode(with: selectVM.selectedEyes)
         rightEyeNode.name = "rightEye"
         node.addChildNode(rightEyeNode)
         
-        let mouthNode = EmojiNode(with: mouthOptions)
+        let mouthNode = EmojiNode(with: selectVM.selectedLips)
         mouthNode.name = "mouth"
         node.addChildNode(mouthNode)
         
-        let hatNode = EmojiNode(with: hatOptions)
-        hatNode.name = "hat"
-        node.addChildNode(hatNode)
+//        let hatNode = EmojiNode(with: hatOptions)
+//        hatNode.name = "hat"
+//        node.addChildNode(hatNode)
         
         updateFeatures(for: node, using: faceAnchor)
         return node

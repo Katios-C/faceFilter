@@ -2,18 +2,17 @@ import SceneKit
 
 class EmojiNode: SCNNode {
     
-    var options: [String]
+    var options: String
     var index = 0
     
-    init(with options: [String], width: CGFloat = 0.05, height: CGFloat = 0.05) {
+    init(with options: String, width: CGFloat = 0.05, height: CGFloat = 0.05) {
         self.options = options
         
         super.init()
         
         let plane = SCNPlane(width: width, height: height)
-        plane.firstMaterial?.diffuse.contents = (options.first ?? " ").image()
+        plane.firstMaterial?.diffuse.contents = (options ?? " ").image()
         plane.firstMaterial?.isDoubleSided = true
-        
         geometry = plane
     }
     
@@ -35,7 +34,7 @@ extension EmojiNode {
         index = (index + 1) % options.count
         
         if let plane = geometry as? SCNPlane {
-            plane.firstMaterial?.diffuse.contents = options[index].image()
+            plane.firstMaterial?.diffuse.contents = options.image()
             plane.firstMaterial?.isDoubleSided = true
         }
     }

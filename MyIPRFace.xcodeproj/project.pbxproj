@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		951C4ADF2845C60600F60389 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951C4ADE2845C60600F60389 /* Extensions.swift */; };
 		951C4AE22845D27100F60389 /* ShareSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951C4AE12845D27100F60389 /* ShareSheet.swift */; };
+		95447245284A1218003879ED /* SelectionOfSmiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95447244284A1218003879ED /* SelectionOfSmiles.swift */; };
+		95447248284DBD29003879ED /* SelectionSmileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95447247284DBD29003879ED /* SelectionSmileViewModel.swift */; };
+		9544724F284DF7CE003879ED /* Resolver in Frameworks */ = {isa = PBXBuildFile; productRef = 9544724E284DF7CE003879ED /* Resolver */; };
+		95447252284DF944003879ED /* ResolverRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95447251284DF944003879ED /* ResolverRegister.swift */; };
 		95B7763A28379EE0005201F6 /* MyIPRFaceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B7763928379EE0005201F6 /* MyIPRFaceApp.swift */; };
 		95B7763C28379EE0005201F6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B7763B28379EE0005201F6 /* ContentView.swift */; };
 		95B7763E28379EE1005201F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95B7763D28379EE1005201F6 /* Assets.xcassets */; };
@@ -24,6 +28,10 @@
 /* Begin PBXFileReference section */
 		951C4ADE2845C60600F60389 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		951C4AE12845D27100F60389 /* ShareSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSheet.swift; sourceTree = "<group>"; };
+		95447244284A1218003879ED /* SelectionOfSmiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionOfSmiles.swift; sourceTree = "<group>"; };
+		95447247284DBD29003879ED /* SelectionSmileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionSmileViewModel.swift; sourceTree = "<group>"; };
+		9544724C284DF4A4003879ED /* IOSurface.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOSurface.framework; path = System/Library/Frameworks/IOSurface.framework; sourceTree = SDKROOT; };
+		95447251284DF944003879ED /* ResolverRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResolverRegister.swift; sourceTree = "<group>"; };
 		95B7763628379EE0005201F6 /* MyIPRFace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyIPRFace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95B7763928379EE0005201F6 /* MyIPRFaceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyIPRFaceApp.swift; sourceTree = "<group>"; };
 		95B7763B28379EE0005201F6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -42,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9544724F284DF7CE003879ED /* Resolver in Frameworks */,
 				95B7768A283CD4BA005201F6 /* iOSDevPackage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -66,11 +75,37 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		95447246284DBD11003879ED /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				95447247284DBD29003879ED /* SelectionSmileViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		9544724B284DF4A4003879ED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9544724C284DF4A4003879ED /* IOSurface.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		95447250284DF930003879ED /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				95447251284DF944003879ED /* ResolverRegister.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
 		95B7762D28379EE0005201F6 = {
 			isa = PBXGroup;
 			children = (
+				95447250284DF930003879ED /* DI */,
 				95B7763828379EE0005201F6 /* MyIPRFace */,
 				95B7763728379EE0005201F6 /* Products */,
+				9544724B284DF4A4003879ED /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -88,6 +123,8 @@
 				95B7764F2837AF94005201F6 /* Info.plist */,
 				95B7763928379EE0005201F6 /* MyIPRFaceApp.swift */,
 				95B7763B28379EE0005201F6 /* ContentView.swift */,
+				95447244284A1218003879ED /* SelectionOfSmiles.swift */,
+				95447246284DBD11003879ED /* ViewModel */,
 				95B7768B283CD72A005201F6 /* StartVideoView.swift */,
 				951C4ADD2845C5F100F60389 /* Helpers */,
 				95B776472837A0E2005201F6 /* ARDelegate.swift */,
@@ -126,6 +163,7 @@
 			name = MyIPRFace;
 			packageProductDependencies = (
 				95B77689283CD4BA005201F6 /* iOSDevPackage */,
+				9544724E284DF7CE003879ED /* Resolver */,
 			);
 			productName = MyIPRFace;
 			productReference = 95B7763628379EE0005201F6 /* MyIPRFace.app */;
@@ -157,6 +195,8 @@
 			mainGroup = 95B7762D28379EE0005201F6;
 			packageReferences = (
 				95B77688283CD4BA005201F6 /* XCRemoteSwiftPackageReference "iosdevpackage" */,
+				95447249284DF28A003879ED /* XCRemoteSwiftPackageReference "Resolver" */,
+				9544724A284DF2EC003879ED /* XCRemoteSwiftPackageReference "Resolver" */,
 			);
 			productRefGroup = 95B7763728379EE0005201F6 /* Products */;
 			projectDirPath = "";
@@ -186,10 +226,13 @@
 			files = (
 				95B7763C28379EE0005201F6 /* ContentView.swift in Sources */,
 				951C4ADF2845C60600F60389 /* Extensions.swift in Sources */,
+				95447245284A1218003879ED /* SelectionOfSmiles.swift in Sources */,
 				95B776482837A0E2005201F6 /* ARDelegate.swift in Sources */,
 				95B7764A2837A2EC005201F6 /* ARViewRepresentable.swift in Sources */,
 				95B7763A28379EE0005201F6 /* MyIPRFaceApp.swift in Sources */,
+				95447248284DBD29003879ED /* SelectionSmileViewModel.swift in Sources */,
 				95B7764C2837A49A005201F6 /* EmojiNode.swift in Sources */,
+				95447252284DF944003879ED /* ResolverRegister.swift in Sources */,
 				95B7768C283CD72A005201F6 /* StartVideoView.swift in Sources */,
 				951C4AE22845D27100F60389 /* ShareSheet.swift in Sources */,
 				95B776A728447A3B005201F6 /* Recording.swift in Sources */,
@@ -321,7 +364,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MyIPRFace/Preview Content\"";
-				DEVELOPMENT_TEAM = HRA638G7C3;
+				DEVELOPMENT_TEAM = E6EEE7YUH4;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_TESTING_SEARCH_PATHS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -334,6 +377,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -355,7 +399,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MyIPRFace/Preview Content\"";
-				DEVELOPMENT_TEAM = HRA638G7C3;
+				DEVELOPMENT_TEAM = E6EEE7YUH4;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_TESTING_SEARCH_PATHS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -368,6 +412,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -405,6 +450,22 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		95447249284DF28A003879ED /* XCRemoteSwiftPackageReference "Resolver" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hmlongco/Resolver.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		9544724A284DF2EC003879ED /* XCRemoteSwiftPackageReference "Resolver" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hmlongco/Resolver.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		95B77688283CD4BA005201F6 /* XCRemoteSwiftPackageReference "iosdevpackage" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://gitlab.issart.com/nbaklanov/iosdevpackage.git";
@@ -416,6 +477,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		9544724E284DF7CE003879ED /* Resolver */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 95447249284DF28A003879ED /* XCRemoteSwiftPackageReference "Resolver" */;
+			productName = Resolver;
+		};
 		95B77689283CD4BA005201F6 /* iOSDevPackage */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 95B77688283CD4BA005201F6 /* XCRemoteSwiftPackageReference "iosdevpackage" */;
