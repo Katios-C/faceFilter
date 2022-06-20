@@ -3,8 +3,9 @@ import Resolver
 
 extension Resolver: ResolverRegistering {
   public static func registerAllServices() {
-   // defaultScope = .graph
-      register {SelectSmileViewModel()}
+   //   register {SelectSmileViewModel()}
       register {ARDelegate()}
   }
 }
+
+// эти классы должны реализовывать протокол и в

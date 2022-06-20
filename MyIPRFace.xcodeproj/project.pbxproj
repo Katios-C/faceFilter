@@ -10,19 +10,18 @@
 		951C4ADF2845C60600F60389 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951C4ADE2845C60600F60389 /* Extensions.swift */; };
 		951C4AE22845D27100F60389 /* ShareSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951C4AE12845D27100F60389 /* ShareSheet.swift */; };
 		95447245284A1218003879ED /* SelectionOfSmiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95447244284A1218003879ED /* SelectionOfSmiles.swift */; };
-		95447248284DBD29003879ED /* SelectionSmileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95447247284DBD29003879ED /* SelectionSmileViewModel.swift */; };
 		9544724F284DF7CE003879ED /* Resolver in Frameworks */ = {isa = PBXBuildFile; productRef = 9544724E284DF7CE003879ED /* Resolver */; };
 		95447252284DF944003879ED /* ResolverRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95447251284DF944003879ED /* ResolverRegister.swift */; };
+		9557459A285AF3F300A51D18 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95574599285AF3F300A51D18 /* Constants.swift */; };
+		9557459E285AF98E00A51D18 /* RectangleSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9557459D285AF98E00A51D18 /* RectangleSelectionView.swift */; };
+		957E9F16285B054000A479D5 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957E9F15285B054000A479D5 /* ButtonView.swift */; };
 		95B7763A28379EE0005201F6 /* MyIPRFaceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B7763928379EE0005201F6 /* MyIPRFaceApp.swift */; };
-		95B7763C28379EE0005201F6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B7763B28379EE0005201F6 /* ContentView.swift */; };
 		95B7763E28379EE1005201F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95B7763D28379EE1005201F6 /* Assets.xcassets */; };
 		95B7764128379EE1005201F6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95B7764028379EE1005201F6 /* Preview Assets.xcassets */; };
 		95B776482837A0E2005201F6 /* ARDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B776472837A0E2005201F6 /* ARDelegate.swift */; };
 		95B7764A2837A2EC005201F6 /* ARViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B776492837A2EC005201F6 /* ARViewRepresentable.swift */; };
 		95B7764C2837A49A005201F6 /* EmojiNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B7764B2837A49A005201F6 /* EmojiNode.swift */; };
 		95B7768A283CD4BA005201F6 /* iOSDevPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 95B77689283CD4BA005201F6 /* iOSDevPackage */; };
-		95B7768C283CD72A005201F6 /* StartVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B7768B283CD72A005201F6 /* StartVideoView.swift */; };
-		95B776A728447A3B005201F6 /* Recording.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B776A628447A3B005201F6 /* Recording.swift */; };
 		95D251F1284F0124000FE477 /* ARViewStart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D251F0284F0124000FE477 /* ARViewStart.swift */; };
 /* End PBXBuildFile section */
 
@@ -30,20 +29,19 @@
 		951C4ADE2845C60600F60389 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		951C4AE12845D27100F60389 /* ShareSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSheet.swift; sourceTree = "<group>"; };
 		95447244284A1218003879ED /* SelectionOfSmiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionOfSmiles.swift; sourceTree = "<group>"; };
-		95447247284DBD29003879ED /* SelectionSmileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionSmileViewModel.swift; sourceTree = "<group>"; };
 		9544724C284DF4A4003879ED /* IOSurface.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOSurface.framework; path = System/Library/Frameworks/IOSurface.framework; sourceTree = SDKROOT; };
 		95447251284DF944003879ED /* ResolverRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResolverRegister.swift; sourceTree = "<group>"; };
+		95574599285AF3F300A51D18 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		9557459D285AF98E00A51D18 /* RectangleSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleSelectionView.swift; sourceTree = "<group>"; };
+		957E9F15285B054000A479D5 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 		95B7763628379EE0005201F6 /* MyIPRFace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyIPRFace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95B7763928379EE0005201F6 /* MyIPRFaceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyIPRFaceApp.swift; sourceTree = "<group>"; };
-		95B7763B28379EE0005201F6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		95B7763D28379EE1005201F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		95B7764028379EE1005201F6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		95B776472837A0E2005201F6 /* ARDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARDelegate.swift; sourceTree = "<group>"; };
 		95B776492837A2EC005201F6 /* ARViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewRepresentable.swift; sourceTree = "<group>"; };
 		95B7764B2837A49A005201F6 /* EmojiNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiNode.swift; sourceTree = "<group>"; };
 		95B7764F2837AF94005201F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		95B7768B283CD72A005201F6 /* StartVideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartVideoView.swift; sourceTree = "<group>"; };
-		95B776A628447A3B005201F6 /* Recording.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recording.swift; sourceTree = "<group>"; };
 		95D251F0284F0124000FE477 /* ARViewStart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewStart.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -64,7 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				951C4ADE2845C60600F60389 /* Extensions.swift */,
-				951C4AE02845D26400F60389 /* View */,
+				95574599285AF3F300A51D18 /* Constants.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -73,18 +71,11 @@
 			isa = PBXGroup;
 			children = (
 				95D251F0284F0124000FE477 /* ARViewStart.swift */,
-				95B7768B283CD72A005201F6 /* StartVideoView.swift */,
+				9557459D285AF98E00A51D18 /* RectangleSelectionView.swift */,
+				957E9F15285B054000A479D5 /* ButtonView.swift */,
 				951C4AE12845D27100F60389 /* ShareSheet.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		95447246284DBD11003879ED /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				95447247284DBD29003879ED /* SelectionSmileViewModel.swift */,
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		9544724B284DF4A4003879ED /* Frameworks */ = {
@@ -101,6 +92,16 @@
 				95447251284DF944003879ED /* ResolverRegister.swift */,
 			);
 			path = DI;
+			sourceTree = "<group>";
+		};
+		957E9F19285B16F000A479D5 /* AR */ = {
+			isa = PBXGroup;
+			children = (
+				95B776472837A0E2005201F6 /* ARDelegate.swift */,
+				95B776492837A2EC005201F6 /* ARViewRepresentable.swift */,
+				95B7764B2837A49A005201F6 /* EmojiNode.swift */,
+			);
+			path = AR;
 			sourceTree = "<group>";
 		};
 		95B7762D28379EE0005201F6 = {
@@ -126,14 +127,10 @@
 			children = (
 				95B7764F2837AF94005201F6 /* Info.plist */,
 				95B7763928379EE0005201F6 /* MyIPRFaceApp.swift */,
-				95B7763B28379EE0005201F6 /* ContentView.swift */,
 				95447244284A1218003879ED /* SelectionOfSmiles.swift */,
-				95447246284DBD11003879ED /* ViewModel */,
+				951C4AE02845D26400F60389 /* View */,
 				951C4ADD2845C5F100F60389 /* Helpers */,
-				95B776472837A0E2005201F6 /* ARDelegate.swift */,
-				95B776A628447A3B005201F6 /* Recording.swift */,
-				95B776492837A2EC005201F6 /* ARViewRepresentable.swift */,
-				95B7764B2837A49A005201F6 /* EmojiNode.swift */,
+				957E9F19285B16F000A479D5 /* AR */,
 				95B7763D28379EE1005201F6 /* Assets.xcassets */,
 				95B7763F28379EE1005201F6 /* Preview Content */,
 			);
@@ -227,18 +224,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95B7763C28379EE0005201F6 /* ContentView.swift in Sources */,
 				951C4ADF2845C60600F60389 /* Extensions.swift in Sources */,
 				95447245284A1218003879ED /* SelectionOfSmiles.swift in Sources */,
+				957E9F16285B054000A479D5 /* ButtonView.swift in Sources */,
 				95B776482837A0E2005201F6 /* ARDelegate.swift in Sources */,
 				95B7764A2837A2EC005201F6 /* ARViewRepresentable.swift in Sources */,
 				95B7763A28379EE0005201F6 /* MyIPRFaceApp.swift in Sources */,
-				95447248284DBD29003879ED /* SelectionSmileViewModel.swift in Sources */,
 				95B7764C2837A49A005201F6 /* EmojiNode.swift in Sources */,
+				9557459E285AF98E00A51D18 /* RectangleSelectionView.swift in Sources */,
+				9557459A285AF3F300A51D18 /* Constants.swift in Sources */,
 				95447252284DF944003879ED /* ResolverRegister.swift in Sources */,
-				95B7768C283CD72A005201F6 /* StartVideoView.swift in Sources */,
 				951C4AE22845D27100F60389 /* ShareSheet.swift in Sources */,
-				95B776A728447A3B005201F6 /* Recording.swift in Sources */,
 				95D251F1284F0124000FE477 /* ARViewStart.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
